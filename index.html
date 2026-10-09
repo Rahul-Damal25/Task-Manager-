@@ -14,9 +14,95 @@
     </header>
 
 
-    <main>
+    <>
 
-           <section></section>
+           <section id="addtasksection">
+
+            <h2>Add New Task</h2>
+ 
+                  <form id="taskform">
+
+                    <input type="text" id="taskinput" placeholder="Enter your task...">
+
+                    <select id="categoryinput">
+                        <option value="Work"> Work</option>
+                        <option value="Personal"> Personal</option>
+                        <option value="Study"> Study</option>
+                    </select>
+
+                    <select id="priorityinput">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <button type="submit"> Add Task</button>
+                  </form>
+
+
+           </section>
+
+           <!--Task counter-->
+
+           <section id="taskcounter">
+
+            <div>
+                <h3>Total Task</h3>
+                <p id="totalcount">0</p>
+            </div>
+
+            <div>
+                <h3>Active Task</h3>
+                <p id="activetask">0</p>
+            </div>
+
+            <div>
+                <h3>Completed Task</h3>
+                <p id="Completedcount">0</p>
+            </div> 
+           </section>
+
+
+           <!-- search and filters-->
+
+           <section id="filtersection">
+            <input type="text" id="searchinput" placeholder="Search tasks...">
+            
+            <select  id="categoryfilter">
+                <option value="all">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+            </select>
+
+            <select  id="Statusfilter">
+                <option value="All">All Status</option>
+                <option value="Active">Active</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <select  id="sortSelect">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest first</option>
+                <option value="high-low">High to Low</option>
+                <option value="low-high">Low to High Priority </option>
+            </select>
+           </section>
+
+           <!--Task list-->
+
+           <section id="tasksection">
+            <h2>    My Tasks</h2>
+
+            <div id="tasklist"></div>
+
+            <p id="emptymessage">You don't have any task yet. Add one !</p>
+           </section>
+
+           <!--clear complted-->
+           <section>
+            <button id="clearcompletedbtn"> Clear Completed</button>
+           </section>
 
     </main>
     
