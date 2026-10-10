@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    padding: 30px 20px;
+}
+header{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 25px;
+    background-color: #1e293b;
+    color: white;
+    border-radius: 12px 12px 0 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    font-size: 28px;
+}
+
+button{
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1d4ed8;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 0 0 12px 12px ;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+h2{
+    margin-bottom: 18px;
+    font-size: 22px;
+
+}
+#addtasksection{
+    padding: 20px;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#taskform{
+    display: flex;
+    gap: 12px;
+}
+input,select{
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-weight: 14px;
+    background-color: white;
+    color: #1e293b;
+    min-width: 0;
+}
+#taskinput{
+    flex: 2;
+}
+#taskform select{
+    flex: 1 ;
+
+}
+input:focus,select:focus{
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+#taskcounter{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    gap: 18px;
+    margin-bottom: 20px;
+}
+#taskcounter div{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eff6ff;
+    text-align: center;
+    border: 1px solid #dbeafe;
+}
+#taskcounter div:nth-child(2){
+    background-color: #ecfdf5;
+}
+
+#taskcounter div:nth-child(3){
+    background-color: #f5f3ff;
+}
+
+#taskcounter h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#taskcounter p{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#filtersection{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#tasksection{
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#tasklist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#emptymessage{
+    color: #64748b;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#clearcompletedbtn{
+    background-color: #ef4444;
+}
+#clearcompletedbtn:hover{
+    background-color: #dc2626;
+}
