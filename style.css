@@ -133,9 +133,70 @@ input:focus,select:focus{
 }
 
 #tasklist{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; */
+
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+#tasklist li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color:  #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: 0.3s ease;
+
+}
+
+#tasklist li :hover{
+     background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+#tasklist input[type = "checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+#tasklist span {
+    flex: 1;
+    overflow-wrap: anywhere;
+    font-size: 16px;
+    color:  #1e293b;
+}
+#tasklist button{
+    padding: 9px 16px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+
+}
+#tasklist button:first-of-type {
+    background-color: #2563eb;
+}
+#tasklist button:first-of-type:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+#tasklist button:last-of-type {
+    background-color: #ef4444;
+}
+
+#tasklist button:last-of-type:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
 }
 #emptymessage{
     color: #64748b;
