@@ -10,6 +10,7 @@ let searchinput = document.getElementById("searchinput");
 let totalcount = document.getElementById("totalcount");
 let activetask = document.getElementById("activetask");
 let completedcount = document.getElementById("Completedcount");
+let darkmodebtn = document.getElementById("darkmodebtn")
 
 function updateTaskCount(){
   totalcount.textContent = tasks.length;
@@ -60,6 +61,42 @@ function renderTasks() {
 
     return matchesSearch && matchesCategory && matchesStatus;
   });
+
+  const sortselect = document.getElementById("sortselect")
+
+  const priorityOrder = {
+    Low : 1,
+    Medium : 2,
+    High : 3
+  }
+
+  const sortvalue  = sortselect.value;
+  // console.log("hii")
+
+  if(sortvalue === "newest"){
+    filteredTasks.sort(function(a,b){
+      return b.createdat - a.createdat;
+    })
+  }
+  else if( sortvalue === "oldest"){
+    
+    filteredTasks.sort(function(a,b){
+      return a.createdat - b.createdat
+    })
+  }
+  else if(sortvalue === "high-low"){
+  
+   filteredTasks.sort(function(a,b){
+    return priorityOrder[b.priority] - priorityOrder[a.priority]
+   })
+  }
+  else if(sortvalue === "low-high"){
+
+    filteredTasks.sort(function(a,b){
+      return priorityOrder[a.priority] - priorityOrder[b.priority]
+    })
+
+  }
 
   filteredTasks.forEach(function (task) {
     const li = document.createElement("li");
@@ -187,3 +224,18 @@ clearcompleted.addEventListener("click", function () {
     renderTasks();
 });
 
+
+darkmodebtn.addEventListener("click",function (){
+  document.body.classList.toggle("dark")
+
+  if(document.body.classList.contains("dark")){
+    darkmodebtn.textContent = "Light Mode"
+  }
+  else{
+    darkmodebtn.textContent = "Dark Mode"
+  }
+})
+
+sortselect.addEventListener("change", function () {
+    renderTasks();
+});
